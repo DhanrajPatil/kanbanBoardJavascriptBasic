@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="checkbox.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="main-header">
+        <div class="header-sub-container flex-start">
+            <span class="action-header-label"> Checkbox Selection</span>
+            <div class="action-color-container">
+                <div class="colors-pallate todo"></div>
+                <div class="colors-pallate analysis"></div>
+                <div class="colors-pallate started"></div>
+                <div class="colors-pallate completed"></div>
+            </div>
+        </div>
+        <div class="header-sub-container flex-end">
+            <div class="action-container">
+                <div class="btn add-btn">
+                    <i class="fa-solid fa-plus"></i>
+                </div>
+                <div class="btn remove-btn">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <div class="main-container">
+        <div class="section todo-section todo">
+            <div class="section-header">
+                <i class="fa-solid fa-list-ol"></i>
+                <span class="header-label"> To-Do </span>
+                <span class="todo-count">  </span>
+            </div>
+            <div class="section-tasks todo-tasks" data-task-type="todo" ondrop="dropTask(event)" ondragover="allowDropTask(event)">
+            </div>
+        </div>
+        <div class="section analysis-section analysis">
+            <div class="section-header">
+                <i class="fa-solid fa-chart-area"></i>
+                <span class="header-label"> In-Analysis </span>
+                <span class="analysis-count">  </span>
+            </div>
+            <div class="section-tasks analysis-tasks" data-task-type="analysis" ondrop="dropTask(event)" ondragover="allowDropTask(event)">
+                
+            </div>
+        </div>
+        <div class="section started-section started">
+            <div class="section-header">
+                <i class="fa-solid fa-hourglass-end"></i>
+                <span class="header-label"> In-Progress </span>
+                <span class="started-count">  </span>
+            </div>
+            <div class="section-tasks started-tasks" data-task-type="started" ondrop="dropTask(event)" ondragover="allowDropTask(event)">
+            </div>
+        </div>
+        <div class="section completed-section completed">
+            <div class="section-header">
+                <i class="fa-solid fa-circle-check"></i>
+                <span class="header-label"> Completed </span>
+                <span class="completed-count">  </span>
+            </div>
+            <div class="section-tasks completed-tasks" data-task-type="completed" ondrop="dropTask(event)" ondragover="allowDropTask(event)">
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-container">
+        <div class="modal-div">
+            <div class="close-btn">
+                <button class="btn modal-btn close-btn">
+                    <i class="fa-regular fa-circle-xmark"></i>
+                </button>
+            </div>
+            <div class="task-input">
+                <div class="modal-header">
+                    Create Task
+                </div>
+                <div class="task-form">
+                    <div class="task-form-field">
+                        <label for="detail" class="task-form-label">Task Detail:</label>
+                        <textarea class="text-area task-detail" name="detail" rows="2" cols="50" placeholder="Enter your task here"></textarea>
+                    </div>
+                    <div class="task-form-field">
+                        <label for="points" class="task-form-label">Points:</label>
+                        <input type="number" name="points" class="text-area story-points"/>
+                    </div>
+                </div>
+                <button class="btn modal-btn save-btn">
+                    <i class="fa-solid fa-check"></i>
+                </button>
+            </div>
+            <div class="task-type-selection">
+                <div class="task-color-pallete-container">
+                    <div class="colors-pallate todo active"></div>
+                    <div class="colors-pallate analysis"></div>
+                    <div class="colors-pallate started"></div>
+                    <div class="colors-pallate completed"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/js/fontawesome.min.js" 
+        integrity="sha512-1M9vud0lqoXACA9QaA8IY8k1VR2dMJ2Qmqzt9pN2AH7eQHWpNsxBpaayV0kKkUsF7FLVQ2sA2SSc8w5VOm7/mg==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+</script>
+<script src="./script.js"></script>
+</html>

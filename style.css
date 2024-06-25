@@ -1,0 +1,257 @@
+
+body{
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-flow: column;
+    align-items: stretch;
+    margin: 0;
+}
+
+.main-header {
+    height: 5rem;
+    background: #3e3e3e;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    padding: 0 10px;
+    flex: 0 1 auto;
+}
+
+.header-sub-container {
+    width: 50%;
+    display: flex;
+    justify-content: end;
+    .action-color-container{
+        background: #626060;
+    }
+}
+
+.flex-start{
+    justify-content: start;
+}
+
+.flex-end{
+    justify-content: end;
+}
+
+.action-color-container {
+    width: 18rem;
+    display: flex;
+    height: 3.5rem;
+    justify-content: space-around;
+    align-items: center;
+    .active{
+        border: 3px Solid rgb(244, 249, 250);
+    }
+
+    .colors-pallate:hover{
+        border-bottom: 3px Solid rgb(244, 249, 250);
+    }
+}
+
+.action-header-label {
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    color: #c5c5c5;
+    padding: 0 15px 0 0;
+}
+
+.colors-pallate{
+    width: 3rem;
+    height: 2rem;
+}
+
+.colors-pallate:hover{
+    border-bottom: 3px Solid rgb(65, 54, 165);
+}
+
+.todo{
+    background-color: rgb(247 192 192);
+}
+.analysis{
+    background-color: #f6f68d;
+}
+.started{
+    background-color: rgb(191 191 244);
+}
+.completed{
+    background-color: rgb(142 245 142);
+}
+
+.action-container{
+    display: flex;
+    width: 8rem;
+    color: white;
+    height: 3.5rem;
+    font-size: 40px;
+    background-color: #626060;
+}
+
+.btn:hover{
+    background: RoyalBlue;
+    cursor: pointer;
+}
+
+.btn{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-container {
+    flex: 1 1 auto;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-evenly;
+}
+
+.section{
+    width: 370px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.section-header{
+    height: 40px;
+    border: 2px Solid #767373;
+    flex: 0 1 auto;
+    font-size: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #686565;
+}
+
+.header-label {
+    margin: 0 10px;
+}
+
+.section-tasks{
+    flex: 1 1 auto;
+    border: 2px dashed #767373;
+    margin: 0;
+    padding: 10px;
+    height: 100px;
+    overflow: auto;
+    div {
+        font-size: 20px;
+        color: #c26d6d;
+        padding: 5px 10px;
+    }
+}
+
+.modal-container{
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background: #fbededcc
+}
+
+.modal-header{
+    font-size: 28px;
+    font-weight: 600;
+    color: #68f138;
+}
+
+
+.modal-div{
+    position: absolute;
+    width: 820px;
+    height: 500px;
+    background-color: #c4c0c0;
+    display: flex;
+    flex-direction: row;
+}
+
+.task-type-selection{
+    width: 30%;
+    background-color: #80807c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.task-color-pallete-container{
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    .colors-pallate{
+        height: 3.5rem;
+        width: 6rem;
+        margin: 20px;
+    }
+    .active{
+        border: 3px Solid rgb(65, 54, 165);
+    }
+    .colors-pallate:hover{
+        border-bottom: 3px Solid rgb(65, 54, 165);
+    }
+}
+
+.task-input{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 50px;
+    gap:20px;
+}
+
+.text-area{
+    border: none;
+    resize: none;
+    outline: none;
+    background-color: #c4c0c0;
+    color: rgb(100, 96, 96);
+    font-size: 24px;
+    border-bottom: 3px Solid #3e3e3e;
+}
+
+.modal-btn{
+    font-size: 30px;/* Blue background */
+    border: none; /* Remove borders */
+    color: white; /* White text */
+    padding: 12px 16px;/* Set a font size */
+    cursor: pointer;
+    height: 3.2rem;
+    width: 5rem; /* Mouse pointer on hover */
+}
+
+.save-btn {
+    background-color: DodgerBlue; 
+}
+
+.close-btn{
+    background-color: #c4c0c0;
+    width: 50px;
+    color: #3e3e3e;
+}
+
+.task-form{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.task-form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.task-form-label{
+    font-size: 20px;
+    color: #c3fbdb;
+}
